@@ -53,6 +53,7 @@ body {
     padding-left: 5%;
     font-size: medium;
     font-weight: 400;
+    border-radius: 5vh;
 }
 
 .search:focus {
@@ -139,6 +140,7 @@ body {
     justify-content: center;
     width:25vw;
     height: 8vh;
+    font-size: 0;
 }
 
 .indicator {
