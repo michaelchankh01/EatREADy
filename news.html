@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel = "stylesheet", href = "style.css">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="swup" class="transition-fade">
+    <div class="topBox"></div>  
+    <div class="middleContainer">
+        <ul class="details">
+          <li class = "searchResults">Pong Can</li>
+          <li class = "searchResults">NA Can</li>
+          <li class = "searchResults">UC Can</li>
+          <li class = "searchResults">Med Can</li>
+          <li class = "searchResults">Veg Can</li>
+          <li class = "searchResults">WS Can</li>
+          <li class = "searchResults">Shaw Can</li>
+        </ul>
+      </div>
+  </main>
+  <nav class = "nav Container" role="navigation">
+    <div class="nav__menu">
+        <ul class="nav__list">
+            <li class="nav__items">
+              <a href="/index.html" class="nav__link" id ="search" alt ="Search" >
+                <div class="nav__box">
+                  <box-icon name='search'></box-icon>
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/bookmark.html" class="nav__link" id ="bookmark" alt ="Bookmark">
+                <div class="nav__box">
+                  <box-icon name='bookmark' ></box-icon>
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/news.html" class="nav__link" id ="news" alt="News">
+                <div class="nav__box">
+                  <box-icon name='news' ></box-icon>
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/settings.html" class="nav__link" id ="settings" alt ="Settings">
+                <div class="nav__box">
+                  <box-icon name='cog'></box-icon>
+                </div>
+              </a>
+            </li>
+          <div class="indicator"></div>
+          </ul>
+    </div>
+  </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
