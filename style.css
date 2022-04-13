@@ -11,14 +11,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: #bbeeff;
     min-height: 100vh;
 }
 
 .topContainer {
     display: flex;
     position: fixed;
-    top: 5%;
+    top: 3vh;
     width: 90vw;
     height: 5vh;
     z-index: 100;
@@ -41,53 +41,79 @@ body {
     border-radius: 5vh;
     padding: 0px 5px;
     font-size: medium;
-    font-weight: 500;
+    font-weight: 400;
 }
 .search:focus {
     outline: none;
 }
-.topbox {
+.topButtons {
+    text-align: center;
+    opacity: 0.5;
+    height: fit-content
+}
+.toplinks{
+    display: flex;
+    justify-content: center;
+}
+.topBox {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 11vh;
+    height: 8vh;
     z-index: 99; 
-    background-color: aqua;
+    background-color: #bbeeff;
 }
 
 
-.details {
+.middleContainer {
     position: absolute;
-    top: 15%;
+    top: 10vh;
 }
 
 .searchResults {
-    border: 10px solid black;
+    box-shadow: 0.1px 0.1px 10px 2px  rgba(0, 0, 0, 0.1) ;
+    padding: 10px 20px;
+    display: block;
+    margin-bottom: 15px;
     height: 200px;
     width: 80vw;
+    list-style-type: none;
+    background-color: white;
+}
+.nav{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.bottomContainer {
-    display: flex;
+.nav__menu {
     position: fixed;
     bottom: 0;
-    width: 100vw;
-    height: 8vh;
-    z-index: 100;
-}
-
-.navBarContainer {
-    height: 8vh;
-    width: 100vw;
-    vertical-align: middle;
-    padding: 0px 10px;
-    box-shadow: 0.1px 0.1px 10px 2px  rgba(0, 0, 0, 0.1) ;
+    left: 0;
     background-color: white;
-    text-align: center;
-    
+    box-shadow: 0px 0px 5px 2px  rgba(0, 0, 0, 0.1) ;
+    width: 100%;
+    height: 8vh;
+    transition: 0.4s;
+    z-index: 100;
+    display: grid;
+    align-content: center;
+
+}
+.nav__items {
+    z-index: 100; 
+}
+.nav__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-.iconContainer{
-    width: 100vw;
-    border: 1px solid black;
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    row-gap: 4px;
 }
