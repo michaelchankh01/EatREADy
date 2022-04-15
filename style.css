@@ -4,26 +4,39 @@
     --bg-color: #e8e8e8;
     --top-box-color: #c9c9c9;
     --nav-bar-color: #c9c9c9;
-}
+    --status-busy-color: #ff9778;
+    --status-normal-color: #dfc353;
+    --status-available-color: #5a8f90;
+    --status-closed-color: #c9c9c9;
 
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
 }
+
+.transition-fade {
+    opacity: 1;
+    transition: 300ms;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
 
 body {
     background-color: var(--bg-color);
     min-height: 100vh;
-}
-
-#swup {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .topContainer {
     display: flex;
@@ -78,27 +91,93 @@ body {
     z-index: 99; 
     background-color: var(--top-box-color);
 }
-
+.topBox2 {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 8vh;
+    z-index: -100; 
+    background-color: var(--top-box-color);
+}
 
 .middleContainer {
     position: absolute;
     top: 10vh;
 }
-
+.details{
+    margin-bottom: 10vh;
+}
 .searchResults {
     box-shadow: 0.1px 0.1px 10px 2px  rgba(0, 0, 0, 0.1) ;
-    padding: 10px 20px;
-    display: block;
+    padding: 20px 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
     margin-bottom: 15px;
     height: 200px;
-    width: 80vw;
+    width: 85vw;
     list-style-type: none;
     background-color: white;
 }
+.searchBox {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.imageBox {
+    margin: 10px 0px;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    
+}
+.searchTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchStatus {
+    text-align: right;
+}
+.statusIcon{
+    display:inline-block;
+    border-radius: 10em;
+    width: 2ex;
+    height: 2ex;
+}
+.statusWord{
+    font-size: 0;
+}
+
+.timeIcon{
+    zoom: 0.8
+}
+
+.busy{
+    background-color: var(--status-busy-color);
+}
+
+.normal{
+    background-color: var(--status-normal-color);
+}
+
+.available{
+    background-color: var(--status-available-color);
+}
+
+.closed{
+    background-color: var(--status-closed-color);
+}
+
+
 
 /* Navigation Bar */
 .nav{
     height: 8vh;
+    bottom:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +211,6 @@ body {
 .nav__link{
     font-weight: 600;
     row-gap: 4px;
-
 }
 .nav__box{
     display: flex;
@@ -143,17 +221,14 @@ body {
     font-size: 0;
 }
 
-.indicator {
+.nav #indicator {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 25%;
     height: 100%;
     background-color: #8a8a8a ;
     opacity: 0.4;
     z-index: 100;
     transition: 0.5s;
-}
-.indicator::before {
-    
+    top: 0;
+    left: 0; 
 }

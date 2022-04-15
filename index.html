@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EatREADy</title>
     <link rel = "stylesheet", href = "style.css">
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script defer src="transit.js"></script>
 </head>
 <body>
-  <main id="swup" class="transition-fade">
     <div class="topContainer">
         <div class="searchContainer">
             <input type="text" placeholder="Search" class="search" role="searchbox">
@@ -32,18 +32,141 @@
     <div class="topBox"></div>
     <div class="middleContainer">
       <ul class="details">
-        <li class = "searchResults">CC Can</li>
-        <li class = "searchResults">Pong Can</li>
-        <li class = "searchResults">NA Can</li>
-        <li class = "searchResults">UC Can</li>
-        <li class = "searchResults">Med Can</li>
-        <li class = "searchResults">Veg Can</li>
-        <li class = "searchResults">WS Can</li>
-        <li class = "searchResults">Shaw Can</li>
+        <li class = "searchResults">
+          <div class="searchBox">
+            <div class = "searchName">Chung Chi Canteen</div>
+            <div class = "searchStatus"> <span class = "statusIcon busy"> </span><span class = "statusWord">Status</span>   Busy</div>
+          </div>
+          <div class="imageBox">
+            <img class = "searchImage" src="img\cccan1.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\cccan2.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\cccan3.jpg" alt="">
+          </div>
+          <div class="searchBox">
+            <div class = "searchTime">
+              <span class = "timeIcon">
+                <box-icon name='time'>
+                  <span class = "statusWord">Opening Hours</span>
+                </box-icon>
+              </span>
+              &nbsp;10:00 am - 10:00 pm</div>
+          </div>
+        </li>
+        <li class = "searchResults">
+          <div class="searchBox">
+            <div class = "searchName">Orchid Lodge</div>
+            <div class = "searchStatus"> <span class = "statusIcon available"> </span><span class = "statusWord">Status</span> Available</div>
+          </div>
+          <div class="imageBox">
+            <img class = "searchImage" src="img\orchid1.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\orchid2.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\orchid3.jpg" alt="">
+          </div>
+          <div class="searchBox">
+            <div class = "searchTime">
+              <span class = "timeIcon">
+                <box-icon name='time'>
+                  <span class = "statusWord">Opening Hours</span>
+                </box-icon>
+              </span>
+              &nbsp;10:00 am - 10:00 pm</div>
+          </div>
+        </li>
+        <li class = "searchResults">
+          <div class="searchBox">
+            <div class = "searchName">S.H. Ho Canteen</div>
+            <div class = "searchStatus"> <span class = "statusIcon normal"> </span><span class = "statusWord">Status</span>   Normal</div>
+          </div>
+          <div class="imageBox">
+            <img class = "searchImage" src="img\SHHOcan1.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\SHHOcan2.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\SHHOcan3.jpg" alt="">
+          </div>
+          <div class="searchBox">
+            <div class = "searchTime">
+              <span class = "timeIcon">
+                <box-icon name='time'>
+                  <span class = "statusWord">Opening Hours</span>
+                </box-icon>
+              </span>
+              &nbsp;10:00 am - 10:00 pm</div>
+          </div>
+        </li>
+        <li class = "searchResults">
+          <div class="searchBox">
+            <div class = "searchName">Paper & Coffee</div>
+            <div class = "searchStatus"> <span class = "statusIcon busy"> </span><span class = "statusWord">Status</span>   Busy</div>
+          </div>
+          <div class="imageBox">
+            <img class = "searchImage" src="img\pnc1.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\pnc2.jpg" alt="">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\pnc3.jpg" alt="">
+          </div>
+          <div class="searchBox">
+            <div class = "searchTime">
+              <span class = "timeIcon">
+                <box-icon name='time'>
+                  <span class = "statusWord">Opening Hours</span>
+                </box-icon>
+              </span>
+              &nbsp;10:00 am - 10:00 pm</div>
+          </div>
+        </li>
+        <li class = "searchResults">
+          <div class="searchBox">
+            <div class = "searchName">Café 330</div>
+            <div class = "searchStatus"> <span class = "statusIcon closed"> </span><span class = "statusWord">Status</span> Closed</div>
+          </div>
+          <div class="imageBox">
+            <img class = "searchImage" src="img\Cafe3301.jpg">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\Cafe3302.jpg">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\Cafe3303.jpg">
+          </div>
+          <div class="searchBox">
+            <div class = "searchTime">
+              <span class = "timeIcon">
+                <box-icon name='time'>
+                  <span class = "statusWord">Opening Hours</span>
+                </box-icon>
+              </span>
+              &nbsp;8:00 am - 6:00 pm</div>
+          </div>
+        </li>
+        <li class = "searchResults">
+          <div class="searchBox">
+            <div class = "searchName">Chung Chi College Staff Club</div>
+            <div class = "searchStatus"> <span class = "statusIcon busy"> </span><span class = "statusWord">Status</span>   Busy</div>
+          </div>
+          <div class="imageBox">
+            <img class = "searchImage" src="img\ccstaff1.jpg">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\ccstaff2.jpg">
+            <span>&nbsp;</span>
+            <img class = "searchImage" src="img\ccstaff3.jpg">
+          </div>
+          <div class="searchBox">
+            <div class = "searchTime">
+              <span class = "timeIcon">
+                <box-icon name='time'>
+                  <span class = "statusWord">Opening Hours</span>
+                </box-icon>
+              </span>
+              &nbsp;8:00 am - 6:00 pm</div>
+          </div>
+        </li>
       </ul>
     </div>
-  </main>
-  <nav class = "nav Container" role="navigation">
+  <nav class = "nav Container" id= "navBar" role="navigation">
     <div class="nav__menu">
         <ul class="nav__list">
             <li class="nav__items">
@@ -78,11 +201,11 @@
                 </div>
               </a>
             </li>
-          <div class="indicator"></div>
+          <div id="indicator"></div>
           </ul>
     </div>
   </nav>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
