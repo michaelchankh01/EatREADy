@@ -10,22 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-    <script defer src="transit.js"></script>
 </head>
 <body>
     <div class="topContainer">
         <div class="searchContainer">
             <input type="text" placeholder="Search" class="search" role="searchbox">
               <div class="topButtons">
-                <a hef="#" class = "toplinks" id ="filterButton">
-                  <box-icon name='slider-alt'></box-icon>
-                </a>
+                  <box-icon name='slider-alt' class="topIcons"></box-icon>
               </div>
               <div class="topButtons">
-                <a hef="#" class = "toplinks" id ="searchButton">
-                  <box-icon name='search'></box-icon>
-                </a>
+                  <box-icon name='search' class="topIcons"></box-icon>
               </div>
         </div>
     </div>
@@ -166,45 +160,45 @@
         </li>
       </ul>
     </div>
-  <nav class = "nav Container" id= "navBar" role="navigation">
-    <div class="nav__menu">
-        <ul class="nav__list">
-            <li class="nav__items">
-              <a href="/EatREADy/index.html" class="nav__link" id ="search">
-                <div class="nav__box">
-                  Search
-                  <box-icon name='search'></box-icon>
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/EatREADy/bookmark.html" class="nav__link" id ="bookmark">
-                <div class="nav__box">
-                  Bookmark
-                  <box-icon name='bookmark' ></box-icon>
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/EatREADy/news.html" class="nav__link" id ="news">
-                <div class="nav__box">
-                  News
-                  <box-icon name='news' ></box-icon>
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/EatREADy/settings.html" class="nav__link" id ="settings">
-                <div class="nav__box">
-                  Settings
-                  <box-icon name='cog'></box-icon>
-                </div>
-              </a>
-            </li>
-          <div id="indicator"></div>
-          </ul>
-    </div>
-  </nav>
+    <nav class = "nav Container" id= "navBar" role="navigation">
+      <div class="nav__menu">
+          <ul class="nav__list">
+              <li class="nav__items">
+                <a href="/index.html" class="nav__link" id ="search">
+                  <div class="nav__box">
+                    Search
+                    <box-icon name='search' id="current"></box-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__items">
+                <a href="/bookmark.html" class="nav__link" id ="bookmark">
+                  <div class="nav__box">
+                    Bookmark
+                    <box-icon name='bookmark'></box-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__items">
+                <a href="/news.html" class="nav__link" id ="news">
+                  <div class="nav__box">
+                    News
+                    <box-icon name='news'></box-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav__items">
+                <a href="/settings.html" class="nav__link" id ="settings">
+                  <div class="nav__box">
+                    Settings
+                    <box-icon name='cog'></box-icon>
+                  </div>
+                </a>
+              </li>
+            <div class="indicator index"></div>
+            </ul>
+      </div>
+    </nav>
 
   <script src="app.js"></script>
 </body>

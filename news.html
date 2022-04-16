@@ -10,28 +10,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-    <script defer src="transit.js"></script>
+
 </head>
 <body>
-  <div class="topContainer"></div>
-  <div class="middleContainer">
-        <ul class="details">
-          <li class = "searchResults">Pong Can</li>
-          <li class = "searchResults">NA Can</li>
-          <li class = "searchResults">UC Can</li>
-          <li class = "searchResults">Med Can</li>
-          <li class = "searchResults">Veg Can</li>
-          <li class = "searchResults">WS Can</li>
-          <li class = "searchResults">Shaw Can</li>
-        </ul>
+  <div class="topContainer">
+    <div class="topWords">
+      <box-icon class="topIcon" name='news' color = #fff2df alt=""></box-icon>
+      News
+    </div>
   </div>
-  <div class="topBox"></div>  
+  <div class="topBox"></div>
+  <div class="middleContainer">
+    <ul class="details">
+      <li class = "newsResults">
+        <div class="newBox">
+          <div class = "newsName">Vegetarian Food Shop</div>
+        </div>
+        <hr class="boxLine">
+        <div >
+          Currently closed under online class and work from home arrangement.
+        </div>
+      </li>
+      <li class = "newsResults">
+        <div class="newBox">
+          <div class = "newsName">United College Canteen</div>
+        </div>
+        <hr class="boxLine">
+        <div >
+          Opening Hours during Easter Holidays (15 to 18 April 2022): <br><br>
+          15 & 16 April :(11:00 am – 8:45 pm) <br>
+          17 April : Closed<br>
+          19 April : 11:00 am – 8:45 pm <br>
+        </div>
+      </li>
+      <li class = "newsResults">
+        <div class="newBox">
+          <div class = "newsName">Chung Chi Canteen</div>
+        </div>
+        <hr class="boxLine">
+        <div >
+          Special discount for Chung Chi Student!
+        </div>
+      </li>
+      <li class = "newsResults">
+        <div class="newBox">
+          <div class = "newsName">Paper and Coffee</div>
+        </div>
+        <hr class="boxLine">
+        <div >
+          New menu and suprises this week!
+        </div>
+      </li>
+    </ul>
+  </div>
   <nav class = "nav Container" id= "navBar" role="navigation">
     <div class="nav__menu">
         <ul class="nav__list">
             <li class="nav__items">
-              <a href="/EatREADy/index.html" class="nav__link" id ="search">
+              <a href="/index.html" class="nav__link" id ="search">
                 <div class="nav__box">
                   Search
                   <box-icon name='search'></box-icon>
@@ -39,30 +75,30 @@
               </a>
             </li>
             <li class="nav__items">
-              <a href="/EatREADy/bookmark.html" class="nav__link" id ="bookmark">
+              <a href="/bookmark.html" class="nav__link" id ="bookmark">
                 <div class="nav__box">
                   Bookmark
-                  <box-icon name='bookmark' ></box-icon>
+                  <box-icon name='bookmark'></box-icon>
                 </div>
               </a>
             </li>
             <li class="nav__items">
-              <a href="/EatREADy/news.html" class="nav__link" id ="news">
+              <a href="/news.html" class="nav__link" id ="news">
                 <div class="nav__box">
                   News
-                  <box-icon name='news' ></box-icon>
+                  <box-icon name='news' id="current"></box-icon>
                 </div>
               </a>
             </li>
             <li class="nav__items">
-              <a href="/EatREADy/settings.html" class="nav__link" id ="settings">
+              <a href="/settings.html" class="nav__link" id ="settings">
                 <div class="nav__box">
                   Settings
                   <box-icon name='cog'></box-icon>
                 </div>
               </a>
             </li>
-          <div id="indicator"></div>
+          <div class="indicator news"></div>
           </ul>
     </div>
   </nav>

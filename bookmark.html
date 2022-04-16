@@ -10,28 +10,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-    <script defer src="transit.js"></script>
 </head>
 <body>
+  <div class="topContainer">
+    <div class="topWords">
+      <box-icon class="topIcon" name='bookmark' color = #fff2df alt=""></box-icon>
+      Bookmark
+    </div>
+  </div>
   <div class="topBox"></div>
   <div class="middleContainer">
-      <ul class="details">
-        <li class = "searchResults">CC Can</li>
-        <li class = "searchResults">Pong Can</li>
-        <li class = "searchResults">NA Can</li>
-        <li class = "searchResults">UC Can</li>
-        <li class = "searchResults">Med Can</li>
-        <li class = "searchResults">Veg Can</li>
-        <li class = "searchResults">WS Can</li>
-        <li class = "searchResults">Shaw Can</li>
-      </ul>
-    </div>
+    <ul class="details">
+      
+      <li class = "searchResults">
+        <div class="searchBox">
+          <div class = "searchName">Orchid Lodge</div>
+          <div class = "searchStatus"> <span class = "statusIcon available"> </span><span class = "statusWord">Status</span> Available</div>
+        </div>
+        <div class="imageBox">
+          <img class = "searchImage" src="img\orchid1.jpg" alt="">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\orchid2.jpg" alt="">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\orchid3.jpg" alt="">
+        </div>
+        <div class="searchBox">
+          <div class = "searchTime">
+            <span class = "timeIcon">
+              <box-icon name='time'>
+                <span class = "statusWord">Opening Hours</span>
+              </box-icon>
+            </span>
+            &nbsp;10:00 am - 10:00 pm</div>
+        </div>
+      </li>
+      
+      <li class = "searchResults">
+        <div class="searchBox">
+          <div class = "searchName">Paper & Coffee</div>
+          <div class = "searchStatus"> <span class = "statusIcon busy"> </span><span class = "statusWord">Status</span>   Busy</div>
+        </div>
+        <div class="imageBox">
+          <img class = "searchImage" src="img\pnc1.jpg" alt="">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\pnc2.jpg" alt="">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\pnc3.jpg" alt="">
+        </div>
+        <div class="searchBox">
+          <div class = "searchTime">
+            <span class = "timeIcon">
+              <box-icon name='time'>
+                <span class = "statusWord">Opening Hours</span>
+              </box-icon>
+            </span>
+            &nbsp;10:00 am - 10:00 pm</div>
+        </div>
+      </li>
+      <li class = "searchResults">
+        <div class="searchBox">
+          <div class = "searchName">Café 330</div>
+          <div class = "searchStatus"> <span class = "statusIcon closed"> </span><span class = "statusWord">Status</span> Closed</div>
+        </div>
+        <div class="imageBox">
+          <img class = "searchImage" src="img\Cafe3301.jpg">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\Cafe3302.jpg">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\Cafe3303.jpg">
+        </div>
+        <div class="searchBox">
+          <div class = "searchTime">
+            <span class = "timeIcon">
+              <box-icon name='time'>
+                <span class = "statusWord">Opening Hours</span>
+              </box-icon>
+            </span>
+            &nbsp;8:00 am - 6:00 pm</div>
+        </div>
+      </li>
+      <li class = "searchResults">
+        <div class="searchBox">
+          <div class = "searchName">Chung Chi College Staff Club</div>
+          <div class = "searchStatus"> <span class = "statusIcon busy"> </span><span class = "statusWord">Status</span>   Busy</div>
+        </div>
+        <div class="imageBox">
+          <img class = "searchImage" src="img\ccstaff1.jpg">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\ccstaff2.jpg">
+          <span>&nbsp;</span>
+          <img class = "searchImage" src="img\ccstaff3.jpg">
+        </div>
+        <div class="searchBox">
+          <div class = "searchTime">
+            <span class = "timeIcon">
+              <box-icon name='time'>
+                <span class = "statusWord">Opening Hours</span>
+              </box-icon>
+            </span>
+            &nbsp;8:00 am - 6:00 pm</div>
+        </div>
+      </li>
+    </ul>
+  </div>
   <nav class = "nav Container" id= "navBar" role="navigation">
     <div class="nav__menu">
         <ul class="nav__list">
             <li class="nav__items">
-              <a href="/EatREADy/index.html" class="nav__link" id ="search">
+              <a href="/index.html" class="nav__link" id ="search">
                 <div class="nav__box">
                   Search
                   <box-icon name='search'></box-icon>
@@ -39,30 +125,30 @@
               </a>
             </li>
             <li class="nav__items">
-              <a href="/EatREADy/bookmark.html" class="nav__link" id ="bookmark">
+              <a href="/bookmark.html" class="nav__link" id ="bookmark">
                 <div class="nav__box">
                   Bookmark
-                  <box-icon name='bookmark' ></box-icon>
+                  <box-icon name='bookmark' id="current"></box-icon>
                 </div>
               </a>
             </li>
             <li class="nav__items">
-              <a href="/EatREADy/news.html" class="nav__link" id ="news">
+              <a href="/news.html" class="nav__link" id ="news">
                 <div class="nav__box">
                   News
-                  <box-icon name='news' ></box-icon>
+                  <box-icon name='news'></box-icon>
                 </div>
               </a>
             </li>
             <li class="nav__items">
-              <a href="/EatREADy/settings.html" class="nav__link" id ="settings">
+              <a href="/settings.html" class="nav__link" id ="settings">
                 <div class="nav__box">
                   Settings
                   <box-icon name='cog'></box-icon>
                 </div>
               </a>
             </li>
-          <div id="indicator"></div>
+          <div class="indicator bookmark"></div>
           </ul>
     </div>
   </nav>
