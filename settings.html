@@ -8,14 +8,14 @@
     <link rel = "stylesheet", href = "style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 <body>
   <div class="topContainer">
-    <div class="topWords">
-      <box-icon class="topIcon" name='cog' alt=""></box-icon>
-      Settings
+    <div class="topBar">
+      <box-icon class="topIcons" name='cog' alt=""></box-icon>
+      <div class="topWords"> Settings </div>
     </div>
   </div>
 
@@ -27,7 +27,7 @@
           <div class = "settingsName">Display Size</div>
           <output class = "settingsContent" for="slider" id="size">2</output>
         </div>
-        <hr class="boxLine" alt="">
+        <hr class="line settings" alt="">
         <div class="dragBar">
           <input type="range" min="1" max="5" value = "2" id ="slider"
             step="1"
@@ -37,20 +37,6 @@
             oninput="outputUpdate(value)">
         </div>
       </li>
-
-      <li class = "settingsResults">
-        <div class="settingsBox">
-          <div role ="checkbox" class = "settingsName">High Contrast Mode</div>
-          <div class = "settingsContent">
-            <label class="switch">
-              <input type="checkbox" id = "contrast">
-              <span class="button round"></span>
-          </label>
-        </div>
-        </div>
-        <hr class="boxLine" alt="">
-      </li>
-
       <li class = "settingsResults">
         <div class="settingsBox">
           <div role ="checkbox" class = "settingsName">Dark Mode</div>
@@ -61,7 +47,56 @@
           </label>
         </div>
         </div>
-        <hr class="boxLine" alt="">
+        <hr class="line settings" alt="">
+      </li>
+      
+      <li class = "settingsResults">
+        <div class="settingsBox">
+          <div role ="checkbox" class = "settingsName">High Contrast Mode</div>
+          <div class = "settingsContent">
+            <label class="switch">
+              <input type="checkbox" id = "contrast">
+              <span class="button round"></span>
+          </label>
+        </div>
+        </div>
+        <hr class="line settings" alt="">
+      </li>
+
+      <li class = "settingsResults">
+        <div class="settingsBox">
+          <div role ="checkbox" class = "settingsName">Hide Address and Hours Information</div>
+          <div class = "settingsContent">
+            <label class="switch">
+              <input type="checkbox" id = "hideWords">
+              <span class="button round"></span>
+          </label>
+        </div>
+        </div>
+        <hr class="line settings" alt="">
+      </li>
+
+      <li class = "settingsResults">
+        <div class="settingsBox">
+          <div role ="checkbox" class = "settingsName">Hide Pictures</div>
+          <div class = "settingsContent">
+            <label class="switch">
+              <input type="checkbox" id = "hideImages">
+              <span class="button round"></span>
+          </label>
+        </div>
+        </div>
+        <hr class="line settings" alt="">
+      </li>
+
+      <li class = "settingsResults">
+        <div class="settingsBox">
+          <div role ="checkbox" class = "settingsName">Language</div>
+          <div class = "settingsContent">
+            English
+        </div>
+        </div>
+        <hr class="line settings" alt="">
       </li>
 
     </ul>
@@ -74,7 +109,6 @@
             <li class="nav__items">
               <a href="/index.html" class="nav__link" id ="search">
                 <div class="nav__box">
-                  Search
                   <box-icon name='search'></box-icon>
                 </div>
               </a>
@@ -82,7 +116,6 @@
             <li class="nav__items">
               <a href="/bookmark.html" class="nav__link" id ="bookmark">
                 <div class="nav__box">
-                  Bookmark
                   <box-icon name='bookmark'></box-icon>
                 </div>
               </a>
@@ -90,7 +123,6 @@
             <li class="nav__items">
               <a href="/news.html" class="nav__link" id ="news">
                 <div class="nav__box">
-                  News
                   <box-icon name='news'></box-icon>
                 </div>
               </a>
@@ -98,7 +130,6 @@
             <li class="nav__items">
               <a href="/settings.html" class="nav__link" id ="settings">
                 <div class="nav__box">
-                  Settings
                   <box-icon name='cog' id="current"></box-icon>
                 </div>
               </a>

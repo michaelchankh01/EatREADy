@@ -5,10 +5,12 @@
     --top-box-color: #BC9C84;
     --line-color: #BC9C84;
     --search-bar-color: white;
-    --search-box-color: white;
+    --search-box-color: white;    
+    --placeholder-color:rgb(117,117,117);
     --border-color: transparent;
     --icon-color: #fff2df;
-    --light-color: #fff2df;
+    --icons-color:black;
+    --light-color: white;
     --button-on-color: #BC9C84;
     --button-off-color: #d4c7b3;
     --button-color: white;
@@ -30,8 +32,10 @@
     --line-color: #ebdecb;
     --search-bar-color: #303030;
     --search-box-color: #303030;
+    --placeholder-color:rgb(117,117,117);
     --border-color: transparent;
-    --icon-color: #fff2df;
+    --icon-color: white;
+    --icons-color:white;
     --light-color: #fff2df;
     --button-on-color: #BC9C84;
     --button-off-color: #111111;
@@ -39,12 +43,14 @@
     --text-color: white;
     --slider-color: #BC9C84;
     --bar-color: #111111;
-    --indicator-color: rgba(82, 82, 82, 0.4);
+    --indicator-color: #303030;
+    
 
     --status-busy-color: #ec9086;
     --status-normal-color: #fbc760;
     --status-available-color: #7bd87b;
     --status-closed-color: #979797;
+
 }
 
 .highContrast{
@@ -53,8 +59,10 @@
     --line-color: white;
     --search-bar-color: black;
     --search-box-color: black;
+    --placeholder-color: white;
     --border-color: white;
     --icon-color: white;
+    --icons-color:white;
     --light-color: white;
     --button-on-color: yellow;
     --button-off-color: white;
@@ -75,21 +83,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
-    transition: 0.4s;
+    font-family: 'Rubik', sans-serif;
+    transition: font 0.4s;
     transition-timing-function: ease-in-out;
     color: var(--text-color);
+    line-height:1.5
 }
-
-.transition-fade {
-    opacity: 1;
-    transition: 300ms;
-}
-
-html.is-animating .transition-fade {
-    opacity: 0;
-}
-
 
 body {
     background-color: var(--bg-color);
@@ -99,6 +98,9 @@ body {
     align-items: center;
 }
 
+box-icon.icons {
+    fill: var(--icons-color);
+}
 
 .topContainer {
     display: flex;
@@ -108,22 +110,49 @@ body {
     height: 5vh;
     z-index: 100;
 }
-.topWords{
+.topBar{
     height: 5vh;
     padding-left: 2.5vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     align-content: center ;
-    font-size: 3vh;
     color: var(--light-color);
+    width:87.5vw;
 }
-.topIcon{
+.topWords{
+    height: 5vh;
+    padding-left: 1vw;
+    display:flex;
+    align-items: center;
+    font-size: 2.85vh;
+    font-weight: 500;
+    color: var(--icon-color);
+    width:87.5vw;
+}
+.topIcons{
     margin-right:1vw;
-    margin-bottom: 0.5vh;
     fill: var(--icon-color);
+    zoom: 1.2;
+}
+.topResultBar{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+    width:87.5vw;
 }
 
+.backButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.removeStyle{
+    all: unset;
+}
 
 .searchContainer {
     width: 90vw;
@@ -143,7 +172,7 @@ body {
     height: 100%;
     width: 100%;
     padding-left: 5%;
-    font-size: 2vh;
+    font-size: 1.9vh;
     font-weight: 400;
     border-radius: 5vh;
     background-color: var(--search-bar-color);
@@ -151,6 +180,10 @@ body {
 
 .search:focus {
     outline: none;
+}
+
+::placeholder {
+    color: var(--placeholder-color);
 }
 
 .topButtons {
@@ -161,10 +194,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 120; 
-}
-box-icon.topIcons{
-
-    color: #8e7765;
+    fill: var(--top-box-color);
 }
 
 .topBox {
@@ -179,13 +209,20 @@ box-icon.topIcons{
 .middleContainer {
     position: absolute;
     top: 10vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 .details{
     margin-bottom: 10vh;
 }
+.searchLink {
+    text-decoration: none;
+}
 .searchResults {
     box-shadow: 0.1px 0.1px 10px 2px  rgba(0, 0, 0, 0.1) ;
-    padding: 20px 20px;
+    padding: 15px 20px;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -193,7 +230,6 @@ box-icon.topIcons{
     border-radius: 10px;
     border: solid 2px var(--border-color);
     margin-bottom: 15px;
-    height: 200px;
     width: 85vw;
     list-style-type: none;
     background-color: var(--search-box-color);
@@ -209,36 +245,42 @@ box-icon.topIcons{
     overflow-x: scroll;
     display: flex;
     flex-direction: row;
-    
+    margin-top: 0px;
+}
+
+.searchImage {
+    height: 14vh;
 }
 .searchName{
-    font-size: 2vh;
-    font-weight: 600;
+    font-size: 1.9vh;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .searchTime {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2vh;
+    font-size: 1.6vh;
 }
 .searchStatus {
     text-align: right;
     font-weight: 500;
-    font-size: 2vh;
+    font-size: 1.9vh;
 }
 .statusIcon{
     display:inline-block;
     border-radius: 10em;
-    width: 2ex;
-    height: 2ex;
+    width: 1.5ex;
+    height: 1.5ex;
 }
 .statusWord{
     font-size: 0;
 }
 
 .timeIcon{
-    zoom: 0.8
+    zoom: 0.8;
+    display: flex;
 }
 
 .busy{
@@ -256,13 +298,109 @@ box-icon.topIcons{
 .closed{
     background-color: var(--status-closed-color);
 }
-.boxLine {
-    width: 100%;  
-    height: 1px;    
+.menuResults {
+    box-shadow: 0.1px 0.1px 10px 2px  rgba(0, 0, 0, 0.1) ;
+    padding: 10px 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border-radius: 10px;
+    border: solid 2px var(--border-color);
+    margin-bottom: 10px;
+    width: 85vw;
+    list-style-type: none;
+    background-color: var(--search-box-color);
+}
+.menuName {
+    font-size: 1.9vh;
+    font-weight: 500;
+}
+.menuBox {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.menuButtonContainer{
+    display:flex;
+    flex-direction: row;
+    width: 85vw;
+    justify-content:space-between;
+}
+
+.menuButtons {
+    box-shadow: 0.1px 0.1px 10px 2px  rgba(0, 0, 0, 0.1) ;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border-radius: 10px;
+    border: solid 1px var(--border-color);
+    list-style-type: none;
+    background-color: var(--search-box-color);
+}
+.menuButtonBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9vh;
+}
+
+.menuTitle{
+    color: var(--text-color);
+    margin-left:5vw;
+    margin-bottom:1vh;
+    font-size: 2.85vh;
+    font-weight: 500;
+}
+
+.menuImageBox {
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    margin-bottom:15px;
+}
+.menuImage{
+    width:100%;
+}
+.menuTop {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 85vw;
+    list-style-type: none;
+}
+.menuDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9vh;
+    margin-bottom: 10px;
+}
+.menuDetailBox{
+    padding: 10px 10px;
+    padding-bottom: 0px;
+}
+
+.line {
+
+    height: 1.5px;    
     margin-bottom: 1.5vh;  
     margin-top: 1vh;  
-    border-width: 1 px;  
-    border-color: var(--line-color);  
+    border-width: 0px;  
+    border-color: transparent;
+    outline: none;
+    background-color: var(--line-color);  
+
+}
+.settings{
+    width: 100%;  
+}
+.menu{
+    width: 90vw;  
+
 }
 
 .newsResults {
@@ -280,14 +418,15 @@ box-icon.topIcons{
     background-color: var(--search-box-color);
 }
 .newsName {
-    font-size: 2vh;
-    font-weight: 600;
+    font-size: 1.9vh;
+    font-weight: 500;
 }
 .newsBox {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
 }
+
 
 .settingsResults {
     padding: 20px 20px;
@@ -302,8 +441,8 @@ box-icon.topIcons{
     list-style-type: none;
 }
 .settingsName {
-    font-size: 2vh;
-    font-weight: 600;
+    font-size: 1.9vh;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,6 +455,7 @@ box-icon.topIcons{
 .settingsContent {
     display: flex;
     justify-content:center;
+    align-items: center;
 }
 
 .dragBar{
@@ -461,7 +601,7 @@ box-icon.topIcons{
 }
 
 .nav__link{
-    font-weight: 600;
+    font-weight: 500;
     row-gap: 4px;
 }
 .nav__box{

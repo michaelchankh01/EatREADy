@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EatREADy</title>
-    <link rel = "stylesheet", href = "style.css">
+    <link rel = "stylesheet", href = "../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
@@ -14,53 +14,52 @@
 </head>
 <body>
   <div class="topContainer">
-    <div class="topBar">
-      <box-icon class="topIcons" name='news' alt=""></box-icon>
-      <div class="topWords"> News </div>
+    <div class="topResultBar">
+        <a class="removeStyle" href="/search/cccan.html">
+            <box-icon class="topIcons backButton" name='arrow-back' alt=""></box-icon>
+        </a>
+      <div class="topWords">Breakfast</div>
     </div>
   </div>
   <div class="topBox"></div>
   <div class="middleContainer">
-    <ul class="details">
-      <li class = "newsResults">
-        <div class="newsBox">
-          <div class = "newsName">Vegetarian Food Shop</div>
-        </div>
-        <hr class="line">
-        <div >
-          Currently closed under online class and work from home arrangement.
-        </div>
-      </li>
-      <li class = "newsResults">
-        <div class="newsBox">
-          <div class = "newsName">United College Canteen</div>
-        </div>
-        <hr class="line">
-        <div >
-          Opening Hours during Easter Holidays (15 to 18 April 2022): <br><br>
-          15 & 16 April :(11:00 am – 8:45 pm) <br>
-          17 April : Closed<br>
-          19 April : 11:00 am – 8:45 pm <br>
-        </div>
-      </li>
-      <li class = "newsResults">
-        <div class="newBox">
-          <div class = "newsName">Chung Chi Tang Canteen</div>
-        </div>
-        <hr class="line">
-        <div >
-          Special discount for Chung Chi Student!
-        </div>
-      </li>
-      <li class = "newsResults">
-        <div class="newBox">
-          <div class = "newsName">Paper & Coffee</div>
-        </div>
-        <hr class="line">
-        <div >
-          New menu and suprises this week!
-        </div>
-      </li>
+      <a class="removeStyle" href="/search/cccan_breakfast_steak.html">
+          <li class = "menuResults">
+              <div class="menuBox">
+              <div class = "menuName">Steak Breakfast</div>
+          </li>
+        </a>
+        <li class = "menuResults">
+            <div class="menuBox">
+            <div class = "menuName">Scrammbled Egg Breakfast</div>
+        </li>
+        <li class = "menuResults">
+            <div class="menuBox">
+            <div class = "menuName">Oat Milk Breakfast</div>
+        </li>
+        <li class = "menuResults">
+            <div class="menuBox">
+            <div class = "menuName">Macaroni in Soup Breakfast</div>
+        </li>
+        <li class = "menuResults">
+            <div class="menuBox">
+            <div class = "menuName">Damae Ramen Noodle Breakfast</div>
+        </li>
+        <li class = "menuResults">
+            <div class="menuBox">
+            <div class = "menuName">Noodle in Soup Breakfast</div>
+        </li>
+        <li class = "menuResults">
+            <div class="menuBox">
+            <div class = "menuName">Dim Sum & Congee Breakfast</div>
+        </li>
+
+
+
+
+
+
+
     </ul>
   </div>
   <nav class = "nav Container" id= "navBar" role="navigation">
@@ -69,7 +68,7 @@
             <li class="nav__items">
               <a href="/index.html" class="nav__link" id ="search">
                 <div class="nav__box">
-                  <box-icon name='search'></box-icon>
+                  <box-icon name='search' id="current"></box-icon>
                 </div>
               </a>
             </li>
@@ -83,7 +82,7 @@
             <li class="nav__items">
               <a href="/news.html" class="nav__link" id ="news">
                 <div class="nav__box">
-                  <box-icon name='news' id="current"></box-icon>
+                  <box-icon name='news'></box-icon>
                 </div>
               </a>
             </li>
@@ -94,10 +93,10 @@
                 </div>
               </a>
             </li>
-          <div class="indicator news"></div>
+          <div class="indicator index"></div>
           </ul>
     </div>
   </nav>
-  <script src="app.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>

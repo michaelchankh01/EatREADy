@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatREADy</title>
+    <link rel = "stylesheet", href = "../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+</head>
+<body>
+  <div class="topContainer">
+    <div class="topResultBar">
+        <a class="removeStyle" href="/index.html">
+            <box-icon class="topIcons backButton" name='arrow-back' alt=""></box-icon>
+        </a>
+      <div class="topWords">Chung Chi Tang Canteen</div>
+    </div>
+  </div>
+  <div class="topBox"></div>
+  <div class="middleContainer">
+    <ul>
+        <li class = "menuResults menuDetailBox">
+            <div class="menuBox">
+                <div class="menuImageBox">
+                    <img class = "menuImage" src="..\img\cccan1.jpg" alt="">
+                </div>
+            </div>
+            <div class="menuBox">
+              <div class = "menuDetails">
+                <span class = "timeIcon">
+                  <box-icon class='icons' name='map'>
+                    <span class = "menuWord">Location</span>
+                  </box-icon>
+                </span>
+                &nbsp;&nbsp;Pond Crescent, Chung Chi College</div>
+            </div>
+            <div class="menuBox">
+              <div class = "menuDetails">
+                <span class = "timeIcon">
+                  <box-icon class='icons' name='time'>
+                    <span class = "menuWord">Opening Hours</span>
+                  </box-icon>
+                </span>
+                &nbsp;&nbsp;7:30 am - 9:00 pm (Mon – Sun)</div>
+            </div>
+            
+            <div class="menuBox">
+                <div class = "menuDetails">
+                  <span class = "timeIcon">
+                    <box-icon class='icons' name='phone'>
+                      <span class = "menuWord">Phone</span>
+                    </box-icon>
+                  </span>
+                  &nbsp;&nbsp;26036623</div>
+              </div>
+
+            <div class="menuBox">
+            <div class = "menuDetails">
+                <span class = "timeIcon">
+                <box-icon class='icons' name='food-menu'>
+                    <span class = "menuWord">Food Offerings</span>
+                </box-icon>
+                </span>
+                &nbsp;&nbsp;Asian / Western / Fast Food</div>
+            </div>
+
+            <div class="menuBox">
+                <div class = "menuDetails">
+                    <span class = "timeIcon">
+                    <box-icon class='icons' name='dollar-circle'>
+                        <span class = "menuWord">Payment Methods</span>
+                    </box-icon>
+                    </span>
+                    &nbsp;&nbsp;Cash / Octopus</div>
+            </div>
+            
+          </li>
+   </ul>
+   <ul class="menuButtonContainer">
+        <li class = "menuButtons">
+            <div class = "menuButtonBox">
+                <div class = "searchStatus"> <span class = "statusIcon busy"> </span><span class = "statusWord">Status</span>   Busy</div></div>
+        </li>
+        <li class = "menuButtons">
+            <div class = "menuButtonBox">
+                <span class = "timeIcon">
+                <box-icon class='icons' name='news' alt="">
+                    <span class = "menuWord">Payment Methods</span>
+                </box-icon>
+                </span>
+                &nbsp;News</div>
+        </li>
+        <li class = "menuButtons">
+            <div class = "menuButtonBox">
+                <span class = "timeIcon">
+                <box-icon class='icons' name='bookmark' alt="">
+                    <span class = "menuWord">Payment Methods</span>
+                </box-icon>
+                </span>
+                &nbsp;Bookmark</div>
+        </li>
+</ul>
+
+    <hr class="line menu" alt="">
+
+    <ul class="details">
+        <div class="menuTitle" >Menu</div>  
+        <a class="removeStyle" href="/search/cccan_breakfast.html">
+            <li class = "menuResults">
+                <div class="menuBox">
+                <div class = "menuName">Breakfast Sets</div>
+            </li>
+        </a>
+        <li class = "menuResults">
+                <div class="menuBox">
+                <div class = "menuName">Sandwich</div>
+        </li>
+        <li class = "menuResults">
+                <div class="menuBox">
+                <div class = "menuName">Bread</div>
+        </li>
+        <li class = "menuResults">
+                <div class="menuBox">
+                <div class = "menuName">Beverage</div>
+    </ul>
+  </div>
+  <nav class = "nav Container" id= "navBar" role="navigation">
+    <div class="nav__menu">
+        <ul class="nav__list">
+            <li class="nav__items">
+              <a href="/index.html" class="nav__link" id ="search">
+                <div class="nav__box">
+                  <box-icon name='search' id="current"></box-icon>
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/bookmark.html" class="nav__link" id ="bookmark">
+                <div class="nav__box">
+                  <box-icon name='bookmark'></box-icon>
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/news.html" class="nav__link" id ="news">
+                <div class="nav__box">
+                  <box-icon name='news'></box-icon>
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/settings.html" class="nav__link" id ="settings">
+                <div class="nav__box">
+                  <box-icon name='cog'></box-icon>
+                </div>
+              </a>
+            </li>
+          <div class="indicator index"></div>
+          </ul>
+    </div>
+  </nav>
+  <script src="../app.js"></script>
+</body>
+</html>
