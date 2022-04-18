@@ -250,6 +250,7 @@ box-icon.icons {
 
 .searchImage {
     height: 14vh;
+    width: auto;
 }
 .searchName{
     font-size: 1.9vh;
@@ -364,6 +365,7 @@ box-icon.icons {
 }
 .menuImage{
     width:100%;
+    height: auto;
 }
 .menuTop {
     display: flex;
