@@ -567,6 +567,8 @@ box-icon.icons {
 
 
 /* Navigation Bar */
+.nav Container
+
 .nav{
     height: 8vh;
     bottom:0;
@@ -574,6 +576,8 @@ box-icon.icons {
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    position: fixed;
+    bottom: 0;
 }
 
 .nav__menu {
