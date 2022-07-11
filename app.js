@@ -14,31 +14,14 @@ function getCookie(cname) {
     return "";
   }
 
-function outputUpdate(size) {
-    document.querySelector('#size').value = size;
 
-    let display = document.querySelector(".displaySize");
-        
-    switch(display) {
-        case "1":
-            display.style.fontSize =  "2.5vh";
-            break;
-        case "2":
-            display.style.fontSize =  "3vh";
-            break;
-        case "3":
-            display.style.fontSize =  "3.5vh";
-            break;
-        case "4":
-            display.style.fontSize =  "4vh";
-            break;
-        case "5":
-            display.style.fontSize =  "4.5vh";
-            break;
-    }
 
-    let contentClasses = [".settingsName", ".settingsContent"];
-    contentClasses.forEach(i =>{
+
+function NEWoutputUpdate(size) {
+
+
+    let contentClasses1 = [".settingsName", ".settingsContent"];
+    contentClasses1.forEach(i =>{
 
         let content = document.querySelectorAll(i);
         content.forEach(j =>{
@@ -63,27 +46,93 @@ function outputUpdate(size) {
         });
     });
 
-    let titleClasses = ".topWords";
-    let title = document.querySelector(titleClasses);
+    let contentClasses2 = [".newsResults" , ".searchTime"];
+    contentClasses2.forEach(i =>{
 
-    switch(size) {
-    case "1":
-        title.style.fontSize =  "2.5vh";
-        break;
-    case "2":
-        title.style.fontSize =  "3vh";
-        break;
-    case "3":
-        title.style.fontSize =  "3.5vh";
-        break;
-    case "4":
-        title.style.fontSize =  "4vh";
-        break;
-    case "5":
-        title.style.fontSize =  "4.5vh";
-        break;
-    }
+        let content = document.querySelectorAll(i);
+        content.forEach(j =>{
+        
+        switch(size) {
+            case "1":
+                j.style.fontSize =  "1.2vh";  
+                break;
+            case "2":
+                j.style.fontSize =  "1.5vh";    
+                break;
+            case "3":
+                j.style.fontSize =  "1.9vh";
+                break;
+            case "4":
+                j.style.fontSize =  "2.5vh";    
+                break;
+            case "5":
+                j.style.fontSize =  "3vh";    
+                break;
+            };
+        });
+    });
+
+    let titleClasses1 = [".topWords"];
+    titleClasses1.forEach(i =>{
+
+        let title = document.querySelectorAll(i);
+        title.forEach(j =>{
+
+            switch(size) {
+            case "1":
+                j.style.fontSize =  "2.5vh";
+                break;
+            case "2":
+                j.style.fontSize =  "3vh";
+                break;
+            case "3":
+                j.style.fontSize =  "3.5vh";
+                break;
+            case "4":
+                j.style.fontSize =  "4vh";
+                break;
+            case "5":
+                j.style.fontSize =  "4.5vh";
+                break;
+            };
+        });
+    });
+
+    let titleClasses2 = [".newsName", ".searchName",".searchStatus"];
+    titleClasses2.forEach(i =>{
+
+        let title = document.querySelectorAll(i);
+        title.forEach(j =>{
+
+            switch(size) {
+            case "1":
+                j.style.fontSize =  "1.5vh";
+                break;
+            case "2":
+                j.style.fontSize =  "1.9vh";
+                break;
+            case "3":
+                j.style.fontSize =  "2.5vh";
+                break;
+            case "4":
+                j.style.fontSize =  "3vh";
+                break;
+            case "5":
+                j.style.fontSize =  "3.5vh";
+                break;
+            };
+        });
+    });
 };
+
+function outputUpdate(size) {
+    document.querySelector('#size').value = size;
+    document.cookie="wordSize="+size;
+    NEWoutputUpdate(getCookie("wordSize"))
+}
+
+
+NEWoutputUpdate(getCookie("wordSize"))
 
 const wordsToHide = document.querySelectorAll(".wordsToHide");
 const hideWords = document.querySelector("#hideWords");

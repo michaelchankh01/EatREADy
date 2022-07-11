@@ -13,10 +13,46 @@
 
 </head>
 <body>
+  <nav class = "nav Container" id= "navBar" role="navigation">
+    <div class="nav__menu">
+        <ul class="nav__list">
+            <li class="nav__items">
+              <a href="/index.html" class="nav__link" id ="search">
+                <div class="nav__box">
+                  <box-icon name='search' id="current"></box-icon>Search
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/bookmark.html" class="nav__link" id ="bookmark">
+                <div class="nav__box">
+                  <box-icon name='bookmark'></box-icon>Bookmark
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/news.html" class="nav__link" id ="news">
+                <div class="nav__box">
+                  <box-icon name='news'></box-icon>News
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/settings.html" class="nav__link" id ="settings">
+                <div class="nav__box">
+                  <box-icon name='cog'></box-icon>Settings
+                </div>
+              </a>
+            </li>
+          <div class="indicator index"></div>
+          </ul>
+    </div>
+  </nav>
   <div class="topContainer">
     <div class="topResultBar">
         <a class="removeStyle" href="/index.html">
             <box-icon class="topIcons backButton" name='arrow-back' alt=""></box-icon>
+            <span class = "statusWord">Back Button</span>
         </a>
       <div class="topWords">Joyful Inn - UC Canteen</div>
     </div>
@@ -33,17 +69,18 @@
             <div class="menuBox">
               <div class = "menuDetails">
                 <span class = "timeIcon">
-                  <box-icon class='icons' name='map'></box-icon><span class = "statusWord">Location</span>
+                  <box-icon class='icons' name='map'></box-icon>
                 </span>
+                <span class = "statusWord">Location</span>
                 &nbsp;&nbsp;G/F, Cheung Chuk Shan Amenities Building, United College</div>
             </div>
             <div class="menuBox">
               <div class = "menuDetails">
                 <span class = "timeIcon">
                   <box-icon class='icons' name='time'>
-                    <span class = "menuWord">Opening Hours</span>
                   </box-icon>
                 </span>
+                <span class = "statusWord">Opening Hours</span>
                 &nbsp;&nbsp;11:30 am - 8:45 pm (Mon – Sun)</div>
             </div>
             
@@ -51,9 +88,9 @@
                 <div class = "menuDetails">
                   <span class = "timeIcon">
                     <box-icon class='icons' name='phone'>
-                      <span class = "menuWord">Phone</span>
                     </box-icon>
                   </span>
+                  <span class = "statusWord">Phone</span>
                   &nbsp;&nbsp;28322179</div>
               </div>
 
@@ -61,19 +98,19 @@
             <div class = "menuDetails">
                 <span class = "timeIcon">
                 <box-icon class='icons' name='food-menu'>
-                    <span class = "menuWord">Food Offerings</span>
                 </box-icon>
                 </span>
-                &nbsp;&nbsp;Asian / Western / Fast Food</div>
+                <span class = "statusWord">Food Offerings</span>
+                &nbsp;&nbsp;Asian / Western / Fast Food / Vegan</div>
             </div>
 
             <div class="menuBox">
                 <div class = "menuDetails">
                     <span class = "timeIcon">
                     <box-icon class='icons' name='dollar-circle'>
-                        <span class = "menuWord">Payment Methods</span>
                     </box-icon>
                     </span>
+                    <span class = "statusWord">Payment Methods</span>
                     &nbsp;&nbsp;Cash / Octopus</div>
             </div>
             
@@ -88,7 +125,7 @@
             <div class = "menuButtonBox">
                 <span class = "timeIcon">
                 <box-icon class='icons' name='news' alt="">
-                    <span class = "menuWord">Payment Methods</span>
+                    <span class = "statusWord">Payment Methods</span>
                 </box-icon>
                 </span>
                 &nbsp;News</div>
@@ -97,7 +134,7 @@
             <div class = "menuButtonBox">
                 <span class = "timeIcon">
                 <box-icon class='icons' name='bookmark' alt="">
-                    <span class = "menuWord">Payment Methods</span>
+                    <span class = "statusWord">Payment Methods</span>
                 </box-icon>
                 </span>
                 &nbsp;Bookmark</div>
@@ -108,60 +145,25 @@
 
     <ul class="details">
         <div class="menuTitle" >Menu</div>  
-        <a class="removeStyle" href="/search/uccan_breakfast.html">
+        <a class="removeStyle" href="/search/uccan_a.html">
             <li class = "menuResults">
                 <div class="menuBox">
-                <div class = "menuName">Breakfast Sets</div>
+                <div class = "menuName">A. Hot & Sour Soup Rice Noodles</div>
             </li>
         </a>
         <li class = "menuResults">
                 <div class="menuBox">
-                <div class = "menuName">Sandwich</div>
+                <div class = "menuName">B. Singapore Laksa Rice Noodle</div>
         </li>
         <li class = "menuResults">
                 <div class="menuBox">
-                <div class = "menuName">Bread</div>
+                <div class = "menuName">C. Rice with Minced Pork Sauce</div>
         </li>
         <li class = "menuResults">
                 <div class="menuBox">
-                <div class = "menuName">Beverage</div>
+                <div class = "menuName">Drinks</div>
     </ul>
   </div>
-  <nav class = "nav Container" id= "navBar" role="navigation">
-    <div class="nav__menu">
-        <ul class="nav__list">
-            <li class="nav__items">
-              <a href="/index.html" class="nav__link" id ="search">
-                <div class="nav__box">
-                  <box-icon name='search' id="current"></box-icon>
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/bookmark.html" class="nav__link" id ="bookmark">
-                <div class="nav__box">
-                  <box-icon name='bookmark'></box-icon>
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/news.html" class="nav__link" id ="news">
-                <div class="nav__box">
-                  <box-icon name='news'></box-icon>
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/settings.html" class="nav__link" id ="settings">
-                <div class="nav__box">
-                  <box-icon name='cog'></box-icon>
-                </div>
-              </a>
-            </li>
-          <div class="indicator index"></div>
-          </ul>
-    </div>
-  </nav>
   <script src="../app.js"></script>
 </body>
 </html>

@@ -12,6 +12,41 @@
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 <body>
+  <nav class = "nav Container" id= "navBar" role="navigation">
+    <div class="nav__menu">
+        <ul class="nav__list">
+            <li class="nav__items">
+              <a href="/index.html" class="nav__link" id ="search">
+                <div class="nav__box">
+                  <box-icon name='search'></box-icon>Search
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/bookmark.html" class="nav__link" id ="bookmark">
+                <div class="nav__box">
+                  <box-icon name='bookmark'></box-icon>Bookmark
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/news.html" class="nav__link" id ="news">
+                <div class="nav__box">
+                  <box-icon name='news'></box-icon>News
+                </div>
+              </a>
+            </li>
+            <li class="nav__items">
+              <a href="/settings.html" class="nav__link" id ="settings">
+                <div class="nav__box">
+                  <box-icon name='cog' id="current"></box-icon>Settings
+                </div>
+              </a>
+            </li>
+          <div class="indicator settings"></div>
+          </ul>
+    </div>
+  </nav>
   <div class="topContainer">
     <div class="topBar">
       <box-icon class="topIcons" name='cog' alt=""></box-icon>
@@ -33,7 +68,6 @@
             step="1"
             aria-valuemin="1"
             aria-valuemax="5"
-            aria-valuenow="2"
             oninput="outputUpdate(value)">
         </div>
       </li>
@@ -103,42 +137,12 @@
   </div>
 
 
-  <nav class = "nav Container" id= "navBar" role="navigation">
-    <div class="nav__menu">
-        <ul class="nav__list">
-            <li class="nav__items">
-              <a href="/index.html" class="nav__link" id ="search">
-                <div class="nav__box">
-                  <box-icon name='search'></box-icon>Search
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/bookmark.html" class="nav__link" id ="bookmark">
-                <div class="nav__box">
-                  <box-icon name='bookmark'></box-icon>Bookmark
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/news.html" class="nav__link" id ="news">
-                <div class="nav__box">
-                  <box-icon name='news'></box-icon>News
-                </div>
-              </a>
-            </li>
-            <li class="nav__items">
-              <a href="/settings.html" class="nav__link" id ="settings">
-                <div class="nav__box">
-                  <box-icon name='cog' id="current"></box-icon>Settings
-                </div>
-              </a>
-            </li>
-          <div class="indicator settings"></div>
-          </ul>
-    </div>
-  </nav>
+
 
     <script src="app.js"></script>
+    <script type="text/javascript">
+        document.querySelector('#size').value = getCookie("wordSize");
+        document.querySelector('#slider').value = getCookie("wordSize");
+    </script>
 </body>
 </html>
